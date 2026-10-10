@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}vdl — Download video dari mana saja{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-badge">✨ 1000+ situs didukung</div>
+  <h1>Download video dari<br><span class="gradient-text">mana saja.</span></h1>
+  <p class="hero-sub">
+    YouTube, Instagram, TikTok, Twitter/X, Reddit, dan ribuan situs lain.
+    Gratis, cepat, tanpa iklan.
+  </p>
+  <div class="hero-actions">
+    <a href="/downloader" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Mulai Download
+    </a>
+    <a href="/faq" class="btn-secondary">Lihat FAQ</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-card">
+    <div class="feature-icon">🚀</div>
+    <h3>Cepat & Ringan</h3>
+    <p>Powered by yt-dlp, tool download paling cepat dan stabil.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">🎯</div>
+    <h3>Multi Resolusi</h3>
+    <p>Dari 144p sampai 8K. Pilih sesuai kebutuhanmu.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">🎵</div>
+    <h3>Audio Only</h3>
+    <p>Ekstrak audio jadi MP3 untuk podcast atau musik.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-icon">🔒</div>
+    <h3>Tanpa Iklan</h3>
+    <p>Tidak ada popup, tidak ada tracking. Fokus ke tugas.</p>
+  </div>
+</section>
+
+<section class="how-to">
+  <h2>Cara Pakai</h2>
+  <p class="how-to-sub">Cuma 3 langkah, selesai dalam hitungan detik.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Paste URL</h3>
+      <p>Copy link video dari browser atau aplikasi, lalu tempel di kolom input.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Pilih Kualitas</h3>
+      <p>Dari 144p sampai 8K. Ukuran file ditampilkan supaya kamu bisa pilih.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Download</h3>
+      <p>Klik download, tunggu sebentar, file tersimpan otomatis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="supported">
+  <h2>Didukung 1000+ Situs</h2>
+  <p class="supported-sub">Beberapa yang paling populer:</p>
+  <div class="platforms">
+    <div class="platform">YouTube</div>
+    <div class="platform">Instagram</div>
+    <div class="platform">TikTok</div>
+    <div class="platform">Twitter / X</div>
+    <div class="platform">Reddit</div>
+    <div class="platform">Facebook</div>
+    <div class="platform">Vimeo</div>
+    <div class="platform">Twitch</div>
+    <div class="platform">+ ribuan lainnya</div>
+  </div>
+</section>
+{% endblock %}

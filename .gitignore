@@ -1,0 +1,43 @@
+# ─── Python ───
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── Virtual environment ───
+venv/
+env/
+ENV/
+.venv/
+
+# ─── vdl specific ───
+downloads/
+cookies.txt
+*.cookies
+.vdl-archive.txt
+*.mp4
+*.webm
+*.mkv
+*.m4a
+*.mp3
+
+# ─── IDE ───
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── OS ───
+.DS_Store
+Thumbs.db
+desktop.ini

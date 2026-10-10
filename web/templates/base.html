@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>{% block title %}vdl — Video Downloader{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>vdl</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/" class="{% if active == 'home' %}active{% endif %}">Home</a>
+      <a href="/downloader" class="{% if active == 'downloader' %}active{% endif %}">Downloader</a>
+      <a href="/supported" class="{% if active == 'supported' %}active{% endif %}">Situs</a>
+      <a href="/about" class="{% if active == 'about' %}active{% endif %}">About</a>
+      <a href="/faq" class="{% if active == 'faq' %}active{% endif %}">FAQ</a>
+      <a href="/contact" class="{% if active == 'contact' %}active{% endif %}">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <strong>vdl</strong> — Video Downloader
+      <p>Download video dari hampir semua situs, gratis dan open source.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Produk</h4>
+        <a href="/downloader">Downloader</a>
+        <a href="/supported">Situs</a>
+        <a href="/faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 vdl. Dibuat dengan menggunakan Python & yt-dlp.
+  </div>
+</footer>
+
+<script>
+// Navbar toggle untuk mobile
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle) {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('open');
+  });
+  // Tutup menu kalau klik di luar
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('open');
+    }
+  });
+  // Tutup menu kalau klik link
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+}
+</script>
+</body>
+</html>

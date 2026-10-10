@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Contact — vdl{% endblock %}
+
+{% block content %}
+<div class="content-page">
+  <h1>Hubungi Kami</h1>
+  <p class="lead">Ada pertanyaan, saran, atau laporan bug? Kirim pesan.</p>
+
+  <form class="card" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan kamu sudah kami terima.');">
+    <div class="field">
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="name" placeholder="Nama kamu" required>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="email@example.com" required>
+    </div>
+    <div class="field">
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tulis pesan..." required></textarea>
+    </div>
+    <button type="submit">Kirim Pesan</button>
+  </form>
+
+  <h2>Atau lewat</h2>
+  <ul>
+    <li><strong>GitHub:</strong> <a href="#">github.com/your-username/vdl</a></li>
+    <li><strong>Email:</strong> hello@vdl.example</li>
+  </ul>
+</div>
+{% endblock %}
