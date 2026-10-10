@@ -27,10 +27,6 @@ classifiers = [
 dependencies = [
     "yt-dlp>=2024.1.0",
     "questionary>=2.0",
-    "fastapi>=0.110",
-    "uvicorn[standard]>=0.29",
-    "jinja2>=3.1",
-    "python-multipart>=0.0.9",
 ]
 
 [project.optional-dependencies]
@@ -46,10 +42,9 @@ Issues = "https://github.com/Syqmhmmd-commits/vdl/issues"
 
 [project.scripts]
 vdl = "downloader.cli:main"
-vdl-web = "web.app:run"
 
 [tool.setuptools.packages.find]
-include = ["downloader*", "web*"]
+include = ["downloader*"]
 
 [tool.ruff]
 line-length = 100
