@@ -26,7 +26,7 @@ def _c(text, color):
 
 def _banner():
     print(_c("╭─────────────────────────────────────╮", C.CYAN))
-    print(_c("│", C.CYAN) + _c("  🎬 vdl ", C.BOLD) + _c("— Video Downloader", C.DIM) + _c("     │", C.CYAN))
+    print(_c("│", C.CYAN) + _c("  🎬 snatch ", C.BOLD) + _c("— Video Downloader", C.DIM) + _c("     │", C.CYAN))
     print(_c("╰─────────────────────────────────────╯", C.CYAN))
 
 

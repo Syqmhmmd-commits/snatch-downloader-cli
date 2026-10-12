@@ -23,7 +23,7 @@ ENV/
 downloads/
 cookies.txt
 *.cookies
-.vdl-archive.txt
+.snatch-archive.txt
 *.mp4
 *.webm
 *.mkv

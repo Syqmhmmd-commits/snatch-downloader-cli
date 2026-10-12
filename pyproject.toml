@@ -3,14 +3,14 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vdl"
+name = "snatch"
 version = "0.1.0"
 description = "Download video dari hampir semua situs (via yt-dlp)"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [
-    { name = "Syqmhmmd", email = "you@example.com" },
+    { name = "Syqmhmmd", email = "dara2903004@gmail.com" },
 ]
 keywords = ["video", "downloader", "youtube", "tiktok", "instagram", "yt-dlp"]
 classifiers = [
@@ -36,12 +36,12 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Syqmhmmd-commits/vdl"
-Repository = "https://github.com/Syqmhmmd-commits/vdl"
-Issues = "https://github.com/Syqmhmmd-commits/vdl/issues"
+Homepage = "https://github.com/Syqmhmmd-commits/snatch-downloader-cli"
+Repository = "https://github.com/Syqmhmmd-commits/snatch-downloader-cli"
+Issues = "https://github.com/Syqmhmmd-commits/snatch-downloader-cli/issues"
 
 [project.scripts]
-vdl = "downloader.cli:main"
+snatch = "downloader.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["downloader*"]
